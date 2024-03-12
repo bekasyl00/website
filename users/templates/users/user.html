@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+{{title}}
+{%endblock%}
+    {% block coontent %}
+  <div class='pro'>
+                Страница авторизаций
+{% comment %} {%endblock%}
+    {% block coontent %} {% endcomment %}
+<h1>Страница авторизаций</h1>
+<form method='post' class='forme'>
+{% csrf_token %}
+{{form.as_p}}
+<button class='btn btn-outline-warning' type='submit'>Войти</button>
+</form>
+                {%endblock%}
+            </div>
+          </div>
+{% comment %} {%endblock%} {% endcomment %}

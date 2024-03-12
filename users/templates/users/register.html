@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+{{title}}
+{%endblock%}
+    {% block coontent %}
+
+  
+
+             
+                <div class='pro'>
+                <h1>{{title}}</h1>
+                <form method='post' class='form'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class='btn btn-outline-warning' type='submit'>Зарегестировать</button>
+                <p>Уже зарегестрированы?<a href="{% url 'user'%}">Войти в личный кабинет</a></p>
+                </form>
+               
+            </div>
+          </div>
+
+          {%endblock%}
+
+          {% block aside_block %}
+                       
+          {%endblock%}
+          

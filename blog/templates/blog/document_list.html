@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+{{title}}
+{%endblock%}
+    {% block coontent %}
+    <h1>Список документов</h1>
+    <ul class="documents-list"> <!-- Добавляем класс "documents-list" к списку -->
+    {% for document in documents %}
+        <li class="documents-list-item"><a href="{{ document.d_doc.url }}">{{ document.d_naz }}</a></li> <!-- Добавляем класс "documents-list-item" к элементам списка -->
+    {% endfor %}
+    </ul>
+
+    {% if not user.is_authenticated%}
+    
+    {%else%}
+    <a class="upload-link" href="{% url 'upload' %}">
+        <button class="upload-button" type="submit">Добавить файл</button>
+    </a>
+        
+          
+              {%endif%}
+{%endblock%}
+{% block aside_block %}
+<aside class="col-md-4">
+    <h3>tomen</h3>
+    <p> https://yandex.
+        &text=работа
+    </p>
+       <img href='https://avatars.mds.yandex.net/i?id=18414ae574d384ae84936bf3e22e88cc-5440433-images-thumbs&n=13' class="img-thumbnail">
+ewfgasdfasdvasdcf
+<h3>tomen</h3>
+    <p> https://yandex.k
+        &text=раб
+    </p>
+       <img href='https://avatars.mds.yandex.net/i?id=18414ae574d384ae84936bf3e22e88cc-5440433-images-thumbs&n=13' class="img-thumbnail">
+ewfgasdfasdvasdcf
+<h3>tomen</h3>
+    <p> https://yandex.
+        &text=работа
+    </p>
+       <img href='https://avatars.mds.yandex.net/i?id=18414ae574d384ae84936bf3e22e88cc-5440433-images-thumbs&n=13' class="img-thumbnail">
+ewfgasdfasdvasdcf
+{%endblock%}
