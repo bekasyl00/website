@@ -1,10 +1,11 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 {% block title %}
 {{title}}
 {%endblock%}
     {% block coontent %}
     <h1>Список документов</h1>
-    <ul class="documents-list"> <!-- Добавляем класс "documents-list" к списку -->
+    <ul class="documents-list"> 
     {% for document in documents %}
         <li class="documents-list-item"><a href="{{ document.d_doc.url }}">{{ document.d_naz }}</a></li> <!-- Добавляем класс "documents-list-item" к элементам списка -->
     {% endfor %}
@@ -22,22 +23,28 @@
 {%endblock%}
 {% block aside_block %}
 <aside class="col-md-4">
-    <h3>tomen</h3>
-    <p> https://yandex.
-        &text=работа
-    </p>
-       <img href='https://avatars.mds.yandex.net/i?id=18414ae574d384ae84936bf3e22e88cc-5440433-images-thumbs&n=13' class="img-thumbnail">
-ewfgasdfasdvasdcf
-<h3>tomen</h3>
-    <p> https://yandex.k
-        &text=раб
-    </p>
-       <img href='https://avatars.mds.yandex.net/i?id=18414ae574d384ae84936bf3e22e88cc-5440433-images-thumbs&n=13' class="img-thumbnail">
-ewfgasdfasdvasdcf
-<h3>tomen</h3>
-    <p> https://yandex.
-        &text=работа
-    </p>
-       <img href='https://avatars.mds.yandex.net/i?id=18414ae574d384ae84936bf3e22e88cc-5440433-images-thumbs&n=13' class="img-thumbnail">
-ewfgasdfasdvasdcf
-{%endblock%}
+    <!-- Новость про демократию мира -->
+    <div class="aside-item">
+        <h3>Демократия мира</h3>
+        <p>
+            <a href="https://example.com/democracy" backgroun-color=white target="_blank">
+                Последние новости о демократии в мире
+            
+        </p>
+        <img src="{% static 'images/democ.webp' %}" class="img-thumbnail" alt="Демократия мира" style="border: 2px solid blue;">
+    </div></a>
+    
+    <!-- Новость про технологии -->
+    <div class="aside-item">
+        <h3>Технологии</h3>
+        <p>
+            <a href="https://example.com/technology" target="_blank">
+                Новейшие достижения в технологиях
+           
+        </p>
+        <img src="{% static 'images/teckh.jpeg' %}" class="img-thumbnail" alt="Технологии" style="border: 2px solid green;">
+    </div> </a>
+    
+   
+</aside>
+{% endblock %}

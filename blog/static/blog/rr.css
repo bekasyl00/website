@@ -436,3 +436,43 @@ margin-bottom: 150px;
 }
 
 
+.text_h{
+  color: #000;
+  margin: 0 20px 0 20px;
+}
+.aside-item img {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aside-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aside-item h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.aside-item p a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.aside-item p a:hover {
+  text-decoration: underline;
+}
+
+.aside-item:nth-child(1) img {
+  border: 2px solid blue;
+}
+
+.aside-item:nth-child(2) img {
+  border: 2px solid green;
+}
+
+.aside-item:nth-child(3) img {
+  border: 2px solid red;
+}
