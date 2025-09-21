@@ -4,7 +4,7 @@
 {{title}}
 {%endblock%}
     {% block coontent %}
-    <h1>Список документов</h1>
+    <h1>Список запросы</h1>
     <ul class="documents-list"> 
     {% for document in documents %}
         <li class="documents-list-item"><a href="{{ document.d_doc.url }}">{{ document.d_naz }}</a></li> <!-- Добавляем класс "documents-list-item" к элементам списка -->
